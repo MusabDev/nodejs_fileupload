@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('components/head'); %>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div style="max-width: 720px; width: 100%">
+        <h1 class="display-1">FileShare</h1>
+
+        <p class="lead">Convenient file sharing without registration.</p>
+
+        <% if (locals.file) { %>
+        <div class="alert alert-success">
+          File is now available on this link.
+          <a href="<%= file.downloadLink %>"><%= file.downloadLink %></a>
+        </div>
+        <% } %> <%- include('components/upload-form') %>
+      </div>
+    </div>
+  </body>
+</html>
